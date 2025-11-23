@@ -1,7 +1,5 @@
 import { defineConfig } from 'vite';
 
-
-
 export default defineConfig({
-  base: 'interactive-cube-project', 
+  base: '/interactive-cube-project/', 
 });
