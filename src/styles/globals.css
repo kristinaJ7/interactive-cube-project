@@ -1,0 +1,70 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: SpecialGothicExpandedOne, sans-serif;
+  color: #ffffff;
+  font-size: clamp(1.25rem, 0.4rem + 4vw, 4rem);
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  background-color: rgb(148 134 155);
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0px 2px 20px 5px #ffffff8f;
+}
+h1::before {
+  content: '«';
+  color: #ccc;
+  margin-right: 5px;
+}
+h1::after {
+  content: '»';
+  color: #ccc;
+  margin-left: 5px;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  color: currentColor;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/cube.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>interactive-cube-project</title>
+    <link rel="stylesheet" href="./src/styles/animations.css" />
+    <link rel="stylesheet" href="./src/styles/globals.css" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <link rel="stylesheet" href="./src/styles/variables.css" />
+    <link rel="stylesheet" href="./src/styles/cude.css" />
+  </head>
+  <body class="page">
+    <h1 class="title_page">Interactive<br />Cube</h1>
+    <section class="container">
+      <div id="square" class="view">
+        <div class="cube">
+          <div class="side top" data-face="top"></div>
+          <div class="side right" data-face="right"></div>
+          <div class="side bottom" data-face="bottom"></div>
+          <div class="axises">
+            <div class="axis one"></div>
+            <div class="axis two"></div>
+          </div>
+          <div class="side left" data-face="left"></div>
+          <div class="side front" data-face="front"></div>
+          <div class="side back" data-face="back"></div>
+        </div>
+      </div>
+      <p class="hint">Нажмите, на куб чтобы сменить цвет</p>
+      <div class="container_button">
+        <button class="button" id="resizeBtn">Увеличить куб</button>
+        <button class="button" id="shrinkBtn">Уменьшить куб</button>
+      </div>
+    </section>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

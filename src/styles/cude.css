@@ -1,0 +1,117 @@
+.cube {
+  --size: 280px;
+  --vec-x: 700;
+  --vec-y: 1000;
+  --vec-z: 500;
+
+  width: var(--size);
+  height: var(--size);
+  transform: rotate3d(
+    var(--vec-x),
+    var(--vec-y),
+    var(--vec-z),
+    var(--cube-rotate-angle)
+  );
+  transform-origin: calc(var(--size) / 2) calc(var(--size) / 2)
+    calc(-1 * var(--size) / 2);
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.cube:hover .side {
+  filter: brightness(1.2);
+  transition: filter 0.3s ease;
+}
+#square:hover {
+  transform: scale(1.05);
+}
+.side {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: var(--size);
+  height: var(--size);
+  box-shadow: 0 0 10px rgb(180 142 189 / 72%);
+  transition: background-color 0.3s ease;
+}
+
+.top {
+  background-color: rgb(137 111 128 / 87%);
+  transform: rotateX(-90deg) rotateY(180deg);
+  transform-origin: center top;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+.right {
+  background-color: rgb(254 175 232 / 0.5);
+  transform: rotateY(-90deg) rotateX(180deg) rotateZ(180deg) translateX(100%);
+  transform-origin: right center;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+}
+
+.bottom {
+  background-color: rgb(165 152 105 / 81%);
+  transform: rotateX(90deg) rotateY(180deg);
+  transform-origin: center bottom;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+}
+
+.left {
+  background-color: rgb(167 171 210 / 90%);
+  transform: rotateY(90deg) rotateX(180deg);
+  transform-origin: left center;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+.front {
+  background-color: rgb(108 93 134 / 75%);
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+.back {
+  background-color: rgb(109 193 253 / 0.5);
+  transform: translateZ(calc(-1 * var(--size))) rotateY(180deg);
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+.axises {
+  position: absolute;
+  transform: translate3d(-50%, -50%, calc(-1 * var(--size) / 2));
+  transform-style: preserve-3d;
+  inline-size: calc(var(--size) / 10);
+  block-size: calc(var(--size) / 10);
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+}
+
+.axis {
+  position: absolute;
+  inline-size: 100%;
+  block-size: 100%;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+}
+
+.axis.one {
+  background-color: #ffffff;
+  transform: translate(-50%, -50%) rotateZ(90deg);
+}
+
+.axis.two {
+  background-color: rgb(164, 155, 155);
+  transform: translate(-50%, -50%) rotateY(90deg);
+}
+
+@media (width <= 560px) {
+  .cube {
+    --size: 200px;
+
+    width: var(--size);
+    height: var(--size);
+  }
+}

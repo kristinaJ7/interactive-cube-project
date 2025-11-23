@@ -1,0 +1,13 @@
+@keyframes rotateCube {
+  from {
+    transform: rotate3d(var(--vec-x), var(--vec-y), var(--vec-z), 0deg);
+  }
+  to {
+    transform: rotate3d(var(--vec-x), var(--vec-y), var(--vec-z), 360deg);
+  }
+}
+
+.cube {
+  animation: rotateCube 5s linear infinite;
+}
+
