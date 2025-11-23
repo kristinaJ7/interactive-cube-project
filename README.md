@@ -34,6 +34,10 @@ npm run dev
 
 
 
+## Ссылки на проект
 
+- **Репозиторий** (исходный код на GitHub):  
  https://kristinaj7.github.io/interactive-cube-project/
 
+- **Демо‑версия** (сайт на GitHub Pages):
+ https://github.com/kristinaJ7/interactive-cube-project.git
