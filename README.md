@@ -1,4 +1,5 @@
 # "Проект interactive-cube(Интерактивный куб)"
+![Запись 2025-11-23 134729 (3)](https://github.com/user-attachments/assets/73f3d57c-831d-4f4f-acfb-9b28b1f0239d)
 
 Стек: HTML, CSS, JS, Vite
 
